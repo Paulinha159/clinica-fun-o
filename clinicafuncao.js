@@ -1,6 +1,5 @@
 /* Criar um sistema que irá gerenciar as consultas de uma clínica médica.
 Como requisitos, nós teremos as seguintes funcionalidades:
-
 Adicionar uma nova consulta
 Listar todas as consultas
 Atualizar uma consulta existente
@@ -12,7 +11,6 @@ let novaConsulta = {
     Médico: "",
     Data: "",
     Hora: "",
-
 };
 let opcao = 0;
 let cadastrandoConsulta = false;

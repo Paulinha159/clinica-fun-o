@@ -13,25 +13,24 @@ let novaConsulta = {
     Data: "",
     Hora: "",
 
-
 };
 let opcao = 0;
 let cadastrandoConsulta = false;
 let removendoConsulta = false;
-
-console.log("Bem-vindos, escolha uma das opções abaixo:");
+console.log("Bem-vindos!");
+function mensagem ( ){
+console.log("\nEscolha uma das opções abaixo:")
 console.log("1: Digitar as informações da consulta:");
 console.log("2: Caso queira remover uma consulta");
 console.log("3: Atualizar consulta");
 console.log("4: Para ver as consultas que inseriu");
 console.log("5: Sair do programa");
-
+}
+mensagem ();
 process.stdin.on("data", function (data) {
     let entrada_usuario = data.toString().trim();
-
     if (!opcao) {
         opcao = parseInt(entrada_usuario);
-
         switch (opcao) {
             case 1:
                 console.log("Nome do paciente:");
@@ -54,13 +53,7 @@ process.stdin.on("data", function (data) {
                     });
                 }
                 opcao = 0;
-                console.log("\nEscolha uma das opções abaixo:");
-                console.log("1: Digitar as informações da consulta:");
-                console.log("2: Caso queira remover uma consulta");
-                console.log("3: Atualizar consulta");
-                console.log("4: Para ver as consultas que inseriu");
-                console.log("5: Sair do programa");
- 
+                mensagem ()
                 break;
             case 5:
                 console.log("Encerrando o programa...");
@@ -68,13 +61,7 @@ process.stdin.on("data", function (data) {
                 break;
             default:
                 console.log("Opção inválida. Tente novamente.");
-                console.log("\nEscolha uma das opções abaixo:");
-                console.log("1: Digitar as informações da consulta:");
-                console.log("2: Caso queira remover uma consulta");
-                console.log("3: Atualizar consulta");
-                console.log("4: Para ver as consultas que inseriu");
-                console.log("5: Sair do programa");
-                
+                mensagem ();
                 break;
         }
     } else {
@@ -97,13 +84,7 @@ process.stdin.on("data", function (data) {
                         paciente = {};
                         opcao = 0;
                         cadastrandoConsulta = false;
-                        console.log("\nEscolha uma das opções abaixo:");
-                        console.log("1: Digitar as informações da consulta:");
-                        console.log("2: Caso queira remover uma consulta");
-                        console.log("3: Atualizar consulta");
-                        console.log("4: Para ver as consultas que inseriu");
-                        console.log("5: Sair do programa");
-
+                        mensagem ();
                     }
                 }
                 break;
@@ -120,25 +101,12 @@ process.stdin.on("data", function (data) {
                     }
                     opcao = 0;
                     removendoLivro = false;
-                    console.log("\nEscolha uma das opções abaixo:");
-                    console.log("1: Digitar as informações da consulta:");
-                    console.log("2: Caso queira remover uma consulta");
-                    console.log("3: Atualizar consulta");
-                    console.log("4: Para ver as consultas que inseriu");
-                    console.log("5: Sair do programa");
-
+                    mensagem ();
                 }
                 break;
-
             default:
                 console.log("Opção inválida. Tente novamente.");
-                console.log("\nEscolha uma das opções abaixo:");
-                console.log("1: Digitar as informações da consulta:");
-                console.log("2: Caso queira remover uma consulta");
-                console.log("3: Atualizar consulta");
-                console.log("4: Para ver as consultas que inseriu");
-                console.log("5: Sair do programa");
-
+                mensagem ();
                 break;
         }
     }
